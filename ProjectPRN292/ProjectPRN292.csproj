@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2C7B13E8-29BB-4E67-A6D7-5B816AB4E86E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProjectPRN292</RootNamespace>
+    <AssemblyName>ProjectPRN292</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>ProjectPRN292.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\AdminDAO.cs" />
+    <Compile Include="DAL\AnswerDAO.cs" />
+    <Compile Include="DAL\ChapterDAO.cs" />
+    <Compile Include="DAL\DAO.cs" />
+    <Compile Include="DAL\ExamDAO.cs" />
+    <Compile Include="DAL\ExamQuestionDAO.cs" />
+    <Compile Include="DAL\ExamResultDAO.cs" />
+    <Compile Include="DAL\QuestionDAO.cs" />
+    <Compile Include="DAL\StudentDAO.cs" />
+    <Compile Include="DAL\SubjectDAO.cs" />
+    <Compile Include="GUI\Admin\AddEditQuestionGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\AddEditQuestionGUI.Designer.cs">
+      <DependentUpon>AddEditQuestionGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\AnswerControlGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\AnswerControlGUI.Designer.cs">
+      <DependentUpon>AnswerControlGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ExamManageGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ExamManageGUI.Designer.cs">
+      <DependentUpon>ExamManageGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\SubjectChapterManageGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\SubjectChapterManageGUI.designer.cs">
+      <DependentUpon>SubjectChapterManageGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ViewExamDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ViewExamDetails.Designer.cs">
+      <DependentUpon>ViewExamDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\ViewScoreGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\ViewScoreGUI.Designer.cs">
+      <DependentUpon>ViewScoreGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Student\TakingTestGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Student\TakingTestGUI.Designer.cs">
+      <DependentUpon>TakingTestGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Student\QuestionControlGUI.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI\Student\QuestionControlGUI.Designer.cs">
+      <DependentUpon>QuestionControlGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Student\ResultGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Student\ResultGUI.Designer.cs">
+      <DependentUpon>ResultGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Student\StudentOperationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Student\StudentOperationGUI.Designer.cs">
+      <DependentUpon>StudentOperationGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Start.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Start.Designer.cs">
+      <DependentUpon>Start.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\AccountSettingsGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\AccountSettingsGUI.Designer.cs">
+      <DependentUpon>AccountSettingsGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\AdminManageGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\AdminManageGUI.Designer.cs">
+      <DependentUpon>AdminManageGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\StudentManageGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\StudentManageGUI.Designer.cs">
+      <DependentUpon>StudentManageGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Admin\QuestionManageGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Admin\QuestionManageGUI.Designer.cs">
+      <DependentUpon>QuestionManageGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\AdminLoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\AdminLoginGUI.Designer.cs">
+      <DependentUpon>AdminLoginGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\Login\StudentLoginGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\Login\StudentLoginGUI.Designer.cs">
+      <DependentUpon>StudentLoginGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MODEL\Admin.cs" />
+    <Compile Include="MODEL\Answer.cs" />
+    <Compile Include="MODEL\Chapter.cs" />
+    <Compile Include="MODEL\Exam.cs" />
+    <Compile Include="MODEL\ExamResult.cs" />
+    <Compile Include="MODEL\Question.cs" />
+    <Compile Include="MODEL\Student.cs" />
+    <Compile Include="MODEL\Subject.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI\Admin\AddEditQuestionGUI.resx">
+      <DependentUpon>AddEditQuestionGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\AnswerControlGUI.resx">
+      <DependentUpon>AnswerControlGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ExamManageGUI.resx">
+      <DependentUpon>ExamManageGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\SubjectChapterManageGUI.resx">
+      <DependentUpon>SubjectChapterManageGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ViewExamDetails.resx">
+      <DependentUpon>ViewExamDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\ViewScoreGUI.resx">
+      <DependentUpon>ViewScoreGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Student\TakingTestGUI.resx">
+      <DependentUpon>TakingTestGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Student\QuestionControlGUI.resx">
+      <DependentUpon>QuestionControlGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Student\ResultGUI.resx">
+      <DependentUpon>ResultGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Student\StudentOperationGUI.resx">
+      <DependentUpon>StudentOperationGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Start.resx">
+      <DependentUpon>Start.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\AccountSettingsGUI.resx">
+      <DependentUpon>AccountSettingsGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\AdminManageGUI.resx">
+      <DependentUpon>AdminManageGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\StudentManageGUI.resx">
+      <DependentUpon>StudentManageGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Admin\QuestionManageGUI.resx">
+      <DependentUpon>QuestionManageGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\AdminLoginGUI.resx">
+      <DependentUpon>AdminLoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\Login\StudentLoginGUI.resx">
+      <DependentUpon>StudentLoginGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
